@@ -15,6 +15,8 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use('/public', express.static('front-end/public', { fallthrough: false }));
+
 
 app.set("secretKey", "jameelioSecretKey");
 
