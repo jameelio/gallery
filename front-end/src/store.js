@@ -35,7 +35,7 @@ export default new Vuex.Store({
         console.log("login data",user)
         commit('auth_request')
         axios({
-          url: "/users/signIn",
+          url: "http://192.168.0.70:8000/users/signIn",
           method: "POST",
           data: user
         
@@ -59,7 +59,7 @@ export default new Vuex.Store({
         console.log(newUser)
         commit('auth_request');
         axios({
-          url: "/users/signUp/",
+          url: "http://192.168.0.70:8000/users/signUp/",
           method: "POST",
           data: newUser
         }).then(res => {

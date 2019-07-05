@@ -15,7 +15,7 @@
         <router-link class="nav-link" to="/about">About</router-link>
       </li>
       <li class="nav-item" v-if="isLoggedIn">
-          <a @click="logout">Logout</a>
+          <a class="nav-link" @click="logout">Logout</a>
       </li>
     </ul>
   </div>

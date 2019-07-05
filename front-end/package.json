@@ -13,6 +13,7 @@
     "core-js": "^2.6.5",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+    "v-uploader": "^1.8.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vue-swal": "^1.0.0",
