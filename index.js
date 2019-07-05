@@ -15,8 +15,6 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/public', express.static('front-end/public', { fallthrough: false }));
-
 
 app.set("secretKey", "jameelioSecretKey");
 
@@ -26,6 +24,11 @@ app.get("/favicon.ico", function(req, res) {
 
 // public route
 app.use('/users', users);
+
+app.use('/js', express.static('front-end/dist/js'));
+app.use('/css', express.static('front-end/dist/css'));
+// router.use('/public', express.static('public', { fallthrough: false }));
+app.use('/app', express.static('front-end/dist', { fallthrough: false }));
 
 app.use(function(req, res, next) {
   let err = new Error("Not Found");
